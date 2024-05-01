@@ -26,14 +26,12 @@ class EmbeddingModel:
         # Calcular la similitud del coseno
         return cosine_similarity(embedding1, embedding2)[0][0]
 
-    def similarity_by_vector(self, v1, v2):
-        # Embeddings de dos palabras o documentos
-        embedding1 = np.array(v1)
-        embedding2 = np.array(v2)
-
-        # Redimensionar los arrays para que coincidan con la forma de entrada esperada de cosine_similarity
-        embedding1 = embedding1.reshape(1, -1)
-        embedding2 = embedding2.reshape(1, -1)
-
-        # Calcular la similitud del coseno
-        return cosine_similarity(embedding1, embedding2)[0][0] 
+def similarity_by_vector(self, v1, v2):
+    # Embeddings de dos palabras o documentos
+    embedding1 = np.array(v1)
+    embedding2 = np.array(v2)
+    # Redimensionar los arrays para que coincidan con la forma de entrada esperada de cosine_similarity
+    embedding1 = embedding1.reshape(1, -1)
+    embedding2 = embedding2.reshape(1, -1)
+    # Calcular la similitud del coseno
+    return cosine_similarity(embedding1, embedding2)[0][0] 
